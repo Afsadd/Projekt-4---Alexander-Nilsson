@@ -6,35 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script/index.js"></script>
     <link href="style/index.css" rel="stylesheet" type="text/css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Lagar och säkerhet</title>
   </head>
   <script>
     $(function () {
-      $("#theme-button").click(function () {
-        $("#theme-menu").show();
-        $(document).on("click", function () {
-          $("#theme-menu").hide();
-        });
-        $(".theme-color").on("click", function () {
-          var id = $(this).attr("id");
-          $("#theme-style").attr("href", id + ".css");
-        });
-        return false;
+      $("#mercury-theme").click(function () {
+        $(".theme").removeClass(".sky-theme .gold-theme");
+        $(".theme").addClass(".mercury-theme");
+      });
+      $("#sky-theme").click(function () {
+        $(".theme").removeClass(".mercury-theme .gold-theme");
+        $(".theme").addClass(".sky-theme");
+      });
+      $("#gold-theme").click(function () {
+        $(".theme").removeClass(".mercury-theme .sky-theme");
+        $(".theme").addClass(".gold-theme");
       });
     });
   </script>
-  <body class="container-fluid" style="background-color: #4fbbff">
+  <body class="container-fluid theme" style="background-color: #4fbbff">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-4 mt-2">
       <div class="container-fluid">
-        <a class="navbar-brand" style="color: rgb(255, 252, 54)" href="#">
-          Internet</a
-        >
+        <a class="navbar-brand theme" style="color: rgb(255, 252, 54)" href="#"> Internet</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -42,39 +38,19 @@
           data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span
-            class="navbar-toggler-icon"
-            style="color: rgb(255, 252, 54)"
-          ></span>
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="color: rgb(255, 252, 54)"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                style="color: rgb(255, 252, 54)"
-                href="#"
-                >Home</a
-              >
+              <a class="nav-link active" aria-current="page" style="color: rgb(255, 252, 54)" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                style="color: rgb(255, 252, 54)"
-                href="html/something.html"
-                >Features</a
-              >
+              <a class="nav-link" style="color: rgb(255, 252, 54)" href="html/something.html">Features</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                style="color: rgb(255, 252, 54)"
-                href="html/something2.html"
-                >Pricing</a
-              >
+              <a class="nav-link" style="color: rgb(255, 252, 54)" href="html/something2.html">Pricing</a>
             </li>
             <li class="nav-item dropdown">
               <div>
@@ -85,34 +61,15 @@
                   id="navbarDropdownMenuLink theme-button"
                   role="button"
                   data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                  aria-expanded="false">
                   Dropdown link
                 </a>
-                <ul
-                  class="dropdown-menu dropdown-menu-dark"
-                  id="theme-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li
-                    class="dropdown-item theme-color"
-                    style="color: rgb(255, 252, 54)"
-                    id="mercury-theme"
-                  >
-                    Action
-                  </li>
-                  <li
-                    class="dropdown-item theme-color"
-                    style="color: rgb(255, 252, 54)"
-                    id="sky-theme"
-                  >
+                <ul class="dropdown-menu dropdown-menu-dark" id="theme-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li class="dropdown-item theme-color" style="color: rgb(255, 252, 54)" id="mercury-theme">Action</li>
+                  <li class="dropdown-item theme-color" style="color: rgb(255, 252, 54)" id="sky-theme">
                     Another action
                   </li>
-                  <li
-                    class="dropdown-item theme-color"
-                    style="color: rgb(255, 252, 54)"
-                    id="gold-theme"
-                  >
+                  <li class="dropdown-item theme-color" style="color: rgb(255, 252, 54)" id="gold-theme">
                     Something else here
                   </li>
                 </ul>
@@ -124,42 +81,27 @@
     </nav>
     <section class="row">
       <div class="p-2 col-6">
-        <p
-          class="p-2 rounded-4 fw-bold"
-          style="background-color: rgb(148, 211, 255); height: 34vh"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ratione
-          unde molestiae voluptatem obcaecati, cupiditate velit placeat earum
-          dolorem fuga vero laboriosam. Distinctio eveniet omnis consequatur
-          sed, exercitationem reiciendis quam?
+        <p class="p-2 rounded-4 fw-bold" style="background-color: rgb(148, 211, 255); height: 34vh">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ratione unde molestiae voluptatem obcaecati,
+          cupiditate velit placeat earum dolorem fuga vero laboriosam. Distinctio eveniet omnis consequatur sed,
+          exercitationem reiciendis quam?
         </p>
       </div>
       <picture class="mt-2 fw-bold col-3"
-        ><img
-          class="rounded-4 img-fluid"
-          src="img/connection.jpg"
-          alt="connection"
+        ><img class="rounded-4 img-fluid" src="img/connection.jpg" alt="connection"
       /></picture>
       <div class="p-2 col-3">
-        <p
-          class="p-2 rounded-4 fw-bold"
-          style="background-color: rgb(148, 211, 255); height: 34vh"
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ratione
-          unde molestiae voluptatem obcaecati, cupiditate velit placeat earum
-          dolorem fuga vero laboriosam. Distinctio eveniet omnis consequatur
-          sed, exercitationem reiciendis quam?
+        <p class="p-2 rounded-4 fw-bold" style="background-color: rgb(148, 211, 255); height: 34vh">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ratione unde molestiae voluptatem obcaecati,
+          cupiditate velit placeat earum dolorem fuga vero laboriosam. Distinctio eveniet omnis consequatur sed,
+          exercitationem reiciendis quam?
         </p>
       </div>
     </section>
-    <section
-      class="mt-2 rounded-4"
-      style="background-color: rgb(148, 211, 255); height: 30vh"
-    >
+    <section class="mt-2 rounded-4" style="background-color: rgb(148, 211, 255); height: 30vh">
       <p class="mt-2 p-2 rounded-4 fw-bold">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ratione
-        unde molestiae voluptatem obcaecati, cupiditate velit placeat earum
-        dolorem fuga vero laboriosam. Distinctio eveniet omnis consequatur sed,
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ratione unde molestiae voluptatem obcaecati,
+        cupiditate velit placeat earum dolorem fuga vero laboriosam. Distinctio eveniet omnis consequatur sed,
         exercitationem reiciendis quam?
       </p>
     </section>

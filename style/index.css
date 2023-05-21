@@ -14,16 +14,12 @@ body {
 
 .color-blue {
   background-color: rgb(148, 211, 255);
-  padding: 0.5rem;
 }
 
-.size-20 {
+.size-23 {
   width: 23% !important;
 }
 
-.margin {
-  margin-left: 0;
-  left: 0;
-  right: 0;
-  margin-right: 0;
+.sites:hover {
+  background-color: black;
 }
